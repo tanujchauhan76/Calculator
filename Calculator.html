@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style >
+		html{
+			margin:2% 40%;
+		}
+	</style>
+</head>
+<body> 
+        <h2 style="text-align:center">Mini Calculator</h2>
+	<form name="minicalc">
+		<label>Number 1 :</label>
+		<input type="text" name="first" id="first"><br><br>
+		<label>Number 2 :</label>
+		<input type="text" name="second" id="second"><br><br>
+		<label>Get result: </label>
+		<input type="text" name="result"><br><br>	
+		<input type="button" name="" value="ADD" onclick="addition()" >
+		<input type="button" name="" value="SUB" onclick="subtraction()">
+		<input type="button" name="" value="MUL" onclick="multiplication()">
+		<input type="button" name="" value="DIV" onclick="division()">
+		<input type="button" name="" value="MOD" onclick="modulus()">
+	</form>
+</body>
+<script>
+
+	$(document).ready(function(){
+
+
+	});
+	function addition(){
+		var val1 = $('#first').val();
+		var val2 = $('#second').val();
+
+		if(val1=="" && val2==""){
+			$("#first").css("background-color","tomato");
+			$("#second").css("background-color","tomato");			
+		}else{
+			
+
+			if(val1=="" || (isNaN(val1))){
+				$("#first").css("background-color","tomato");
+				$("#second").css("background-color","white");
+
+				alert("Error:Invalid Entry");
+
+			}else
+			{
+				$("#first").css("background-color","white");
+				if(val2=="" || (isNaN(val2))){
+					alert("Error:Invalid Entry");
+					$("#second").css("background-color","tomato");
+					$("#first").css("background-color","white");
+
+				}else
+				{
+					$("#first").css("background-color","white");
+					$("#second").css("background-color","white");
+					first=parseFloat(minicalc.first.value);
+					second=parseFloat(minicalc.second.value);
+					result=(first+second);
+					minicalc.result.value=result;
+				}
+			}
+		}
+	}
+	function subtraction(){
+			var val1 = $('#first').val();
+		var val2 = $('#second').val();
+
+		if(val1=="" && val2==""){
+			$("#first").css("background-color","tomato");
+			$("#second").css("background-color","tomato");			
+		}else{
+			
+
+			if(val1=="" || (isNaN(val1))){
+				$("#first").css("background-color","tomato");
+				$("#second").css("background-color","white");
+
+				alert("Error:Invalid Entry");
+
+			}else
+			{
+				$("#first").css("background-color","white");
+				if(val2=="" || (isNaN(val2))){
+					alert("Error:Invalid Entry");
+					$("#second").css("background-color","tomato");
+					$("#first").css("background-color","white");
+
+				}else
+				{
+					$("#first").css("background-color","white");
+					$("#second").css("background-color","white");
+					first=parseFloat(minicalc.first.value);
+					second=parseFloat(minicalc.second.value);
+					result=(first-second);
+					minicalc.result.value=result;
+				}
+			}
+		}
+
+	}
+	function multiplication (){
+			var val1 = $('#first').val();
+		var val2 = $('#second').val();
+
+		if(val1=="" && val2==""){
+			$("#first").css("background-color","tomato");
+			$("#second").css("background-color","tomato");			
+		}else{
+			
+
+			if(val1=="" || (isNaN(val1))){
+				$("#first").css("background-color","tomato");
+				$("#second").css("background-color","white");
+
+				alert("Error:Invalid Entry");
+
+			}else
+			{
+				$("#first").css("background-color","white");
+				if(val2=="" || (isNaN(val2))){
+					alert("Error:Invalid Entry");
+					$("#second").css("background-color","tomato");
+					$("#first").css("background-color","white");
+
+				}else
+				{
+					$("#first").css("background-color","white");
+					$("#second").css("background-color","white");
+					first=parseFloat(minicalc.first.value);
+					second=parseFloat(minicalc.second.value);
+					result=(first*second);
+					minicalc.result.value=result;
+				}
+			}
+		}
+
+	}
+	function division (){
+			var val1 = $('#first').val();
+		var val2 = $('#second').val();
+
+		if(val1=="" && val2==""){
+			$("#first").css("background-color","tomato");
+			$("#second").css("background-color","tomato");			
+		}else{
+			
+
+			if(val1=="" || (isNaN(val1))){
+				$("#first").css("background-color","tomato");
+				$("#second").css("background-color","white");
+
+				alert("Error:Invalid Entry");
+
+			}else
+			{
+				$("#first").css("background-color","white");
+				if(val2=="" || (isNaN(val2))){
+					alert("Error:Invalid Entry");
+					$("#second").css("background-color","tomato");
+					$("#first").css("background-color","white");
+
+				}else
+				{
+					$("#first").css("background-color","white");
+					$("#second").css("background-color","white");
+					first=parseFloat(minicalc.first.value);
+					second=parseFloat(minicalc.second.value);
+					result=(first/second);
+					minicalc.result.value=result;
+				}
+			}
+		}
+
+	}
+	function modulus (){
+			var val1 = $('#first').val();
+		var val2 = $('#second').val();
+
+		if(val1=="" && val2==""){
+			$("#first").css("background-color","tomato");
+			$("#second").css("background-color","tomato");			
+		}else{
+			
+
+			if(val1=="" || (isNaN(val1))){
+				$("#first").css("background-color","tomato");
+				$("#second").css("background-color","white");
+
+				alert("Error:Invalid Entry");
+
+			}else
+			{
+				$("#first").css("background-color","white");
+				if(val2=="" || (isNaN(val2))){
+					alert("Error:Invalid Entry");
+					$("#second").css("background-color","tomato");
+					$("#first").css("background-color","white");
+
+				}else
+				{
+					$("#first").css("background-color","white");
+					$("#second").css("background-color","white");
+					first=parseFloat(minicalc.first.value);
+					second=parseFloat(minicalc.second.value);
+					result=(first%second);
+					minicalc.result.value=result;
+				}
+			}
+		}
+
+	}
+
+</script>
+</html>
